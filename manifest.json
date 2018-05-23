@@ -14,7 +14,7 @@
 
   "content_scripts": [
     {
-     "matches": ["http://localhost:9000/drivers/roster*"],
+     "matches": ["http://localhost:9000/drivers/roster*", "*://logistics.amazon.com/internal/capacity/rosterview*"],
       "js": ["jquery-3.2.1.min.js", "rosterloader.js"]
     }
   ],
