@@ -1,6 +1,7 @@
 $( document ).ready(function(){
 
   var rosterArray = [];
+  var rosterJSON = {}
 
   let node = $('body');
   let roster = $(node).find('#cspDATable > tbody')[1].children;
@@ -27,7 +28,7 @@ $( document ).ready(function(){
   console.log("making request to api.........")
   $.ajax({
     type: "POST",
-    url: "http://localhost:8000/api/drivers",
+    url: "http://localhost:9000/api/drivers",
     data: JSON.stringify(rosterArray),
     success: function(data){
       console.log(data)
